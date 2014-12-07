@@ -1,0 +1,7 @@
+#
+# Config file for the server-side Haystack generation scripts
+#
+#
+
+MIN_SIZE='1' # MB
+MAX_SIZE='300' # MB
