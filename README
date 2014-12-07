@@ -1,0 +1,10 @@
+BASH Haystack generator
+==========================
+
+Small set of BASH scripts (a server-side and a client-side) to generate random data for requesting via Tor/VPN at random intervals to increase the level of irrelevant traffic which may be observed by a monitoring adversary.
+
+The server-side scripts generate a file of a random size (size range configurable in config) containing random(ish) data from /dev/urandom.
+
+The client scripts request that data (with the option to use a random generator to decide whether to request anything on this run or not).
+
+Note: It's up to the network administrator to ensure that the relevant traffic is routed over their VPN (or Tor) connection
