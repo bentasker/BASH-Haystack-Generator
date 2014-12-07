@@ -70,7 +70,18 @@ Suggested Run Interval
 
 The most appropriate run interval will differ by each users situation, but common sense should be applied. There's not a huge amount of point in attempting to mask your traffic if the script doing the masking runs once every 12 hours for 5 minutes a time.
 
-There may also be situations where it's better to run the script in a while loop than to add it to crontab.
+There may also be situations where it's better to run the script in a while loop than to add it to crontab.  
+
+
+
+Client - Multiple Config Files
+----------------------------------
+
+Although the default config file is called 'config' you can pass the filename of an alternative config file if you wish to maintain multiple configurations
+
+	./request_generator -c foo.config
+
+The filename passed can either be an absolute path, or the name of a config file in the same directory as the request_generator script.
 
 
 ---------------------------------------

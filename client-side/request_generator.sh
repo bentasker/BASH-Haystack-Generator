@@ -5,9 +5,32 @@
 
 mydir=`dirname $0`
 
-# Load the config
 
-source "$mydir/config"
+while getopts "c:" flag
+do
+
+        case "$flag" in
+                c) configfile="$OPTARG";;
+        esac
+done
+
+
+configfile=${configfile:-"$mydir/config"}
+
+
+if [[ ! -f "$configfile" ]]
+then
+	if [[ ! -f "$mydir/$configfile" ]]
+	then
+		echo "Config file ($configfile) not found"
+		exit
+	fi
+	configfile="$mydir/$configfile"
+fi
+
+
+# Load the config
+source "$configfile"
 
 
 [[ -f "$LOCKFILE" ]] && exit;
