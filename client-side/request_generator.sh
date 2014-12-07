@@ -6,6 +6,7 @@
 mydir=`dirname $0`
 
 
+# Load the configuration file
 while getopts "c:" flag
 do
 
@@ -29,10 +30,11 @@ then
 fi
 
 
-# Load the config
+# read in the config file
 source "$configfile"
 
 
+# Check whether the lockfile exists and exit if so
 [[ -f "$LOCKFILE" ]] && exit;
 
 
@@ -70,6 +72,21 @@ then
 fi
 
 
+# Has sending data upstream been set to random
+if [[ "$SEND_DATA" == "r" ]]
+then
+	no=$((RANDOM%2))
+
+	if [[ "$no" == "0" ]]
+	then
+		SEND_DATA="y"
+	else
+		SEND_DATA="n"
+	fi
+
+fi
+
+# If we're to send data upstream, are we supposed to be randomising with each request?
 if [[ "$SEND_DATA" == "y" ]] && [[ "$RANDOMIZE_US_CHUNKSIZE" == "n" ]]
 then
 	UPSTREAM_LEN=$((RANDOM%$MAX_UPSTREAM))
@@ -81,6 +98,8 @@ echo "Will place $REQUESTS Request(s)"
 
 for i in `seq 1 $REQUESTS`
 do
+
+	# Calculate the chunksize if needed
 	if [[ ! "$RANDOMIZE_CHUNKSIZE" == "n" ]]
 	then
 		CHUNKS=$((RANDOM%$MAX_CHUNK_SIZE)) # Chunk size
