@@ -106,7 +106,7 @@ do
 
 	placeRequest "$REMOTE_FILE" "$HTTP_HOSTNAME" "$START" "$END" "$SEND_DATA" "$UPSTREAM_DATA"
 
-	DELAY=$((RANDOM%5)) # Work out how long to delay the next request by
+	DELAY=$((RANDOM%$MAX_DELAY)) # Work out how long to delay the next request by
 	echo "Waiting $DELAY seconds until next request"
 	echo 
 	sleep $DELAY
