@@ -11,4 +11,8 @@ MAX_CHUNK_SIZE=6553600 # Maximum chunk size to request (bytes, default is 655360
 MAX_REQUESTS=100 # Maximum number of requests to make per session
 RANDOMIZE_CHUNKSIZE="y" # Set this to n if you want to use the same size chunk-size throughout a session
 
-SEED_INTERVAL=15 # After how many requests should RANDOM be reseeded?
+SEND_DATA="y" # Should random data also be sent upstream?
+MAX_UPSTREAM="655360" # Data will be a stream of chars, so 1 = 1 byte, take your upstream speeds into consideration
+RANDOMIZE_US_CHUNKSIZE="y" # Set this to n to use the same size upstream chunks per session
+
+
