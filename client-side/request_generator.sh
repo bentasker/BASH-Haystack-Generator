@@ -19,7 +19,7 @@ placeRequest(){
 
 
 	# Place the request
-	wget -O /dev/null --header="Host: $HOST" --header="Range: bytes $START-$END" "$URL" 2> /dev/null
+	curl -H "Host: $HOST" -H "Range: bytes=$START-$END" "$URL" > /dev/null 2> /dev/null
 }
 
 
