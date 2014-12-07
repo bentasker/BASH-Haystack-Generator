@@ -12,7 +12,7 @@ HTTP_HOSTNAME='www.example.co.uk'
 MAX_CHUNK_SIZE=6553600 # Maximum chunk size to request (bytes, default is 6553600bytes/50MB)
 MAX_REQUESTS=100 # Maximum number of requests to make per session
 RANDOMIZE_CHUNKSIZE="y" # Set this to n if you want to use the same size chunk-size throughout a session
-
+USER_AGENT='HaystackGen V0.1'
 
 # Data uploads
 SEND_DATA="y" # Should random data also be sent upstream?

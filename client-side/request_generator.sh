@@ -22,9 +22,9 @@ placeRequest(){
 	if [ "$UPSTREAM" == 'n' ]
 	then
 		# Place the request
-		curl -H "Host: $HOST" -H "Range: bytes=$START-$END" "$URL" > /dev/null 2> /dev/null
+		curl -H "User-agent: $USER_AGENT" -H "Host: $HOST" -H "Range: bytes=$START-$END" "$URL" > /dev/null 2> /dev/null
 	else
-		curl -X POST -d "$DATA" -H "Host: $HOST" -H "Range: bytes=$START-$END" "$URL" > /dev/null 2> /dev/null
+		curl -X POST -d "$DATA" -H "User-agent: $USER_AGENT" -H "Host: $HOST" -H "Range: bytes=$START-$END" "$URL" > /dev/null 2> /dev/null
 	fi
 }
 
