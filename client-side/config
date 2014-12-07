@@ -3,6 +3,10 @@
 #
 #
 
+
+# To disable the script temporarily, simply create a file at the location below
+LOCKFILE='/tmp/haystackfile.lock'
+
 # Endpoint configuration
 REMOTE_FILE='http://www.example.com/largefile'
 HTTP_HOSTNAME='www.example.co.uk'

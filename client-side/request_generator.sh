@@ -10,6 +10,9 @@ mydir=`dirname $0`
 source "$mydir/config"
 
 
+[[ -f "$LOCKFILE" ]] && exit;
+
+
 # Function to place the request - may do more later
 placeRequest(){
 	URL=$1
