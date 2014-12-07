@@ -3,14 +3,18 @@
 #
 #
 
+# Endpoint configuration
 REMOTE_FILE='http://www.example.com/largefile'
 HTTP_HOSTNAME='www.example.co.uk'
 
 
+# Data Downloads
 MAX_CHUNK_SIZE=6553600 # Maximum chunk size to request (bytes, default is 6553600bytes/50MB)
 MAX_REQUESTS=100 # Maximum number of requests to make per session
 RANDOMIZE_CHUNKSIZE="y" # Set this to n if you want to use the same size chunk-size throughout a session
 
+
+# Data uploads
 SEND_DATA="y" # Should random data also be sent upstream?
 MAX_UPSTREAM="655360" # Data will be a stream of chars, so 1 = 1 byte, take your upstream speeds into consideration
 RANDOMIZE_US_CHUNKSIZE="y" # Set this to n to use the same size upstream chunks per session
