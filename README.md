@@ -2,6 +2,9 @@ BASH Haystack generator
 ==========================
 
 
+**Note: This codebase should currently be considered unusable as it's in an early PoC stage!**
+
+
 About
 --------
 
@@ -85,6 +88,13 @@ The filename passed can either be an absolute path, or the name of a config file
 
 
 ---------------------------------------
+
+
+Issue Tracking
+---------------
+
+Development is managed within a private JIRA instance, a static HTML mirror of the project can be found at http://projects.bentasker.co.uk/jira_projects/browse/BHAYSTACKG.html
+
 
 
 
