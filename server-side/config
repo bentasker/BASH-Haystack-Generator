@@ -1,0 +1,8 @@
+#
+# Config file for the server-side Haystack generation scripts
+#
+#
+
+OUTPUT_FILE='/path/to/some/file' # The file to write the data into
+DATA_SOURCE='/dev/urandom' # Where to get the data from
+
